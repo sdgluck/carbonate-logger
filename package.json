@@ -1,0 +1,27 @@
+{
+  "name": "carbonate-logger",
+  "version": "0.0.1",
+  "description": "Colourful console logs using carbonate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/sdgluck/carbonate-logger"
+  },
+  "keywords": [
+    "chalk",
+    "log",
+    "carbonate",
+    "colour",
+    "color",
+    "logs",
+    "console"
+  ],
+  "author": "Sam Gluck <sdgluck@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "carbonate": "1.0.2"
+  }
+}
