@@ -11,7 +11,6 @@ module.exports = function log (str) {
 }
 
 module.exports.error = function logError (str) {
-  if (quiet) return
   str = str || ''
   var values = [].slice.apply(arguments)
   values = values.slice(1)

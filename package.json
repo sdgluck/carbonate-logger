@@ -1,6 +1,6 @@
 {
   "name": "carbonate-logger",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Colourful console logs using carbonate",
   "main": "index.js",
   "scripts": {
