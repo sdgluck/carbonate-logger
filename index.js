@@ -12,8 +12,8 @@ module.exports = function log (str) {
 
 module.exports.error = function logError (str) {
   str = str || ''
-  var values = [].slice.apply(arguments)
-  values = values.slice(1)
+  if (!str) return console.error('')
+  var values = [].slice.apply(arguments).slice(1)
   const args = ['err!'].concat(values)
   const msg = carbonate.apply(carbonate, ['%s(red) ' + str].concat(args))
   console.error(msg)
@@ -22,17 +22,18 @@ module.exports.error = function logError (str) {
 module.exports.warn = function logWarn (str) {
   if (quiet) return
   str = str || ''
-  var values = [].slice.apply(arguments)
-  values = values.slice(1)
+  if (!str) return console.warn('')
+  var values = [].slice.apply(arguments).slice(1)
   var args = ['warn'].concat(values)
   var msg = carbonate.apply(carbonate, ['%s(yellow) ' + str].concat(args))
   console.warn(msg)
 }
 
-module.exports.info = function logInfo (str = '') {
+module.exports.info = function logInfo (str) {
   if (quiet) return
-  var values = [].slice.apply(arguments)
-  values = values.slice(1)
+  str = str || ''
+  if (!str) return console.info('')
+  var values = [].slice.apply(arguments).slice(1)
   var args = ['info'].concat(values)
   var msg = carbonate.apply(carbonate, ['%s(blue) ' + str].concat(args))
   console.info(msg)
